@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="1.0.7.16">
+  <General>
+    <HarmonyPath path="../../../microchip/harmony/v1_06_02"/>
+    <ForceOptimization flag="true"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_ports.c</Name>
+        <Path>Source Files/framework/system/ports/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>sys_debug.c</Name>
+        <Path>Source Files/framework/system/debug/src</Path>
+      </File>
+      <File>
+        <Name>sys_console.h</Name>
+        <Path>Header Files/framework/system/console</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_console_local.h</Name>
+        <Path>Header Files/framework/system/console/src</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/MX7</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/MX7</Path>
+        <Checksum>41D172CB698AA5394893EC80790EFFF6</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static.c</Name>
+        <Path>Source Files/app/system_config/MX7/framework/driver/usart</Path>
+        <Checksum>EB09EDE40258A1A4FA15376AD6A9B9FC</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_console_static.c</Name>
+        <Path>Source Files/app/system_config/MX7/framework/system/console/src</Path>
+        <Checksum>6FF46FB2595B593CB71B3330DB734615</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_can_static.h</Name>
+        <Path>Header Files/app/system_config/MX7/framework/driver/can</Path>
+        <Checksum>43E26EF057A4F26A2EAEF7DE52E56731</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/MX7/framework/system/ports/src</Path>
+        <Checksum>A6E337DE658E08626AE8E0119C761372</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/MX7</Path>
+        <Checksum>71CC1F4764E26FA326AC8516EA33DC4E</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/MX7</Path>
+        <Checksum>9AC33B2960C8DF72C5EB0E3662303FF4</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/MX7</Path>
+        <Checksum>1F81BE2F961D14064CAECB1D1CAA9845</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/MX7/framework/system/clk/src</Path>
+        <Checksum>5AB80C62AD421A2DC039C7C1BA77E221</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.h</Name>
+        <Path>Header Files/app/system_config/MX7/framework/system/clk</Path>
+        <Checksum>999179DADE9ECD59953526F5E9F83ACC</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_can_static.c</Name>
+        <Path>Source Files/app/system_config/MX7/framework/driver/can/src</Path>
+        <Checksum>5EC91B33CD60D63B25FCBE95B37919FC</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/MX7</Path>
+        <Checksum>83B36B66D72F10340887E820C0400906</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static.h</Name>
+        <Path>Header Files/app/system_config/MX7/framework/driver/usart</Path>
+        <Checksum>66C127084540B78CD4F78E2FBCC6D29F</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+    </Templates>
+    <Libraries>
+      <Library value="../../../../../microchip/harmony/v1_06_02/bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>
