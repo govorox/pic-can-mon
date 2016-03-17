@@ -150,6 +150,7 @@ void APP_Initialize ( void )
 
 static char cmdBuffer[64];
 static int cmdTail = 0;
+static bool echoInput = false;
 
 void APP_Tasks ( void )
 {
@@ -161,14 +162,14 @@ void APP_Tasks ( void )
         {
             SYS_CONSOLE_Flush( SYS_CONSOLE_INDEX_0 );
             
-            ssize_t nr;
-            char myBuffer[] = "\r\nCANmon";
-            nr = SYS_CONSOLE_Write( SYS_CONSOLE_INDEX_0, STDOUT_FILENO, myBuffer, strlen(myBuffer) );
+            //ssize_t nr;
+            //char myBuffer[] = "\r\npic-CAN-mon";
+            //nr = SYS_CONSOLE_Write( SYS_CONSOLE_INDEX_0, STDOUT_FILENO, myBuffer, strlen(myBuffer) );
             //if (nr != strlen(myBuffer))
             //{
             //    // Handle error
             //}
-            SYS_PRINT("\r\nTest");
+            SYS_PRINT("\r\npicCANmon");
             appData.state = APP_STATE_IDLE;
             break;
         }
@@ -187,6 +188,8 @@ void APP_Tasks ( void )
             }
             */
             
+            CAN232_Tasks();
+            
             ssize_t nr = 0;
             do {
                 nr = SYS_CONSOLE_ReadX( SYS_CONSOLE_INDEX_0, STDIN_FILENO,
@@ -201,7 +204,7 @@ void APP_Tasks ( void )
                     appData.state = APP_STATE_INPUT;
 
                     PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_G,
-                                     PORTS_BIT_POS_15);
+                                         PORTS_BIT_POS_15);
                 }
             } while (nr > 0);
             
@@ -227,8 +230,9 @@ void APP_Tasks ( void )
                 else 
                 {
                     // echo back
-                    SYS_CONSOLE_Write( SYS_CONSOLE_INDEX_0, STDOUT_FILENO,
-                                       &cmdBuffer[cmdTail-1], 1);
+                    if (echoInput)
+                        SYS_CONSOLE_Write( SYS_CONSOLE_INDEX_0, STDOUT_FILENO,
+                                           &cmdBuffer[cmdTail-1], 1);
                 }
                 
             }

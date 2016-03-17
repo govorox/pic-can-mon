@@ -18,8 +18,6 @@ Commands not supported/not yet implemented:
 - s, W, M, m, U.
 
 Commands modified:
--  S - supports not declared 83.3 rate, refer to https://github.com/latonita/CAN_BUS_Shield fork 
--  F - returns MCP2515 error flags
 -  Z - extra Z2 option enables 4 byte timestamp vs standard 2 byte (60000ms max)
   
 ```
@@ -27,7 +25,7 @@ CMD | IMPLEMENTED | SYNTAX               | DESCRIPTION
 ------------------------------------------------------------------------------------------------------------
 'S' |   YES+      |   Sn[CR]               Setup with standard CAN bit-rates where n is 0-8.
     |             |                        S0 10Kbit          S4 125Kbit         S8 1Mbit
-    |             |                        S1 20Kbit          S5 250Kbit         S9 83.3Kbit
+    |             |                        S1 20Kbit          S5 250Kbit         S9 N/A
     |             |                        S2 50Kbit          S6 500Kbit
     |             |                        S3 100Kbit         S7 800Kbit
 's' |    -        |   sxxyy[CR]            Setup with BTR0/BTR1 CAN bit-rates where xx and yy is a hex value.

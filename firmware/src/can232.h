@@ -166,6 +166,7 @@ extern "C" {
 // Function prototypes
     
 void CAN232_Command(char * command);
+void CAN232_Tasks();
     
 
 #ifdef	__cplusplus
