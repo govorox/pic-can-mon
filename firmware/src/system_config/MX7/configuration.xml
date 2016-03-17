@@ -130,7 +130,7 @@
       <Template>
         <Name>drv_can_static.c</Name>
         <Path>Source Files/app/system_config/MX7/framework/driver/can/src</Path>
-        <Checksum>5EC91B33CD60D63B25FCBE95B37919FC</Checksum>
+        <Checksum>F700F5DB00CF1E212278F5B8DFF70B5E</Checksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>

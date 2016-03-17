@@ -89,8 +89,8 @@ void DRV_CAN0_Initialize(void)
 
      /* Configure CAN_ID_1 Channel for CAN_TX_RTR_ENABLED operation. Allocate 1 message buffer, and assign low medium priority for transmissions. */			  
      PLIB_CAN_ChannelForTransmitSet(CAN_ID_1, CAN_CHANNEL0, 1, CAN_TX_RTR_ENABLED, CAN_LOW_MEDIUM_PRIORITY);
-     /* Configure CAN_ID_1 Channel for CAN_RX_DATA_ONLY operation. Allocate 1 message buffer, and assign low medium priority for transmissions. */			
-     PLIB_CAN_ChannelForReceiveSet(CAN_ID_1, CAN_CHANNEL1, 1, CAN_RX_DATA_ONLY);
+     /* Configure CAN_ID_1 Channel for CAN_RX_FULL_RECEIVE operation. Allocate 1 message buffer, and assign low medium priority for transmissions. */			
+     PLIB_CAN_ChannelForReceiveSet(CAN_ID_1, CAN_CHANNEL1, 1, CAN_RX_FULL_RECEIVE);
      PLIB_CAN_FilterToChannelLink(CAN_ID_1, CAN_FILTER0, CAN_FILTER_MASK0, CAN_CHANNEL1);
      PLIB_CAN_ChannelEventEnable(CAN_ID_1, CAN_CHANNEL1, CAN_RX_CHANNEL_NOT_EMPTY);
 
